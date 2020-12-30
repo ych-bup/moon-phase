@@ -17,10 +17,15 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     if(message.content == prefix + 'help'){
-        var date = moment().format('YYYY')
+        var year = moment().format('YYYY');
+        var month = moment().format('MM');
+        var date = moment().format('DD');
+        var hour = moment().format('HH');
+        var minute = moment().format('mm');
+        var second = moment().format('ss');
 
-        const phase = moon.calculate(2020, 12, 30, 15, 30, 0);
-        message.channel.send(phase.name + " " + date);
+        const phase = moon.calculate(year, month, date, hour, minute, second);
+        message.channel.send(phase.name);
     }    
 });
 
