@@ -1,0 +1,22 @@
+{
+  "name": "moon-phase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ych-bup/moon-phase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ych-bup/moon-phase/issues"
+  },
+  "homepage": "https://github.com/ych-bup/moon-phase#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
