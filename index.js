@@ -1,11 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var moment = require('moment');
-
-require('moment-timezone');
-
-moment.tz.setDefault("Asia/Seoul");
-
 const prefix = 'm?';
 
 const moon = require('celestial-moon');
