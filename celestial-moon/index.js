@@ -24,7 +24,7 @@ const MOON_PHASES = [
  * @param {string} seconds Seconds
  * @param {string} utcOffset Timezone offset to UTC, i.e. -4 or +4
  */
-function calculate(year, month, day, hours, minutes, seconds, utcOffset = 0) {
+function calculate(year, month, day, hours, minutes, seconds, utcOffset = '0') {
     let julianNewMoonReference = gregorianToJulian('2000', '1', '6', '18', '14', '0', '0'); //Lunation Number 18:14 UTC, January 6, 2000
     let julianCalculate = gregorianToJulian(year, month, day, hours, minutes, seconds, utcOffset);
 
