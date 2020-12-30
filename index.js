@@ -8,7 +8,7 @@ moment.tz.setDefault("Asia/Seoul");
 
 const prefix = 'm?';
 
-const moon = require('celestial-moon');
+const moon = require('./celestial-moon');
 
 client.on('ready', async () => {
     console.log('We logged in as ' + client.user.tag + '!');
