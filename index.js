@@ -12,7 +12,7 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     if(message.content == prefix + 'help'){
-        const phase = moon.calculate(2020, 11, 10, 9, 30, 0, 0);
+        const phase = moon.calculate(2020, 12, 29, 9, 30, 0, 0);
         message.channel.send(phase.name);
     }    
 });
