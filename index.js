@@ -25,7 +25,7 @@ client.on('message', async message => {
         var second = moment().format('ss');
 
         const phase = moon.calculate(year, month, date, hour, minute, second);
-        message.channel.send(phase.name);
+        message.channel.send(phase.name + year);
     }    
 });
 
