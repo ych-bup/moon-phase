@@ -8,3 +8,4 @@ client.on('ready', async () => {
     client.user.setActivity(`what is today's moon phase?`,{ type: "STREAMING" });
 });
 
+client.login(process.env.TOKEN);
