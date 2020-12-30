@@ -17,9 +17,9 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     if(message.content == prefix + 'help'){
-        var date = moment().format('YYYY-MM-DD HH:mm:ss')
+        var date = moment().format('YYYY, MM, DD, HH, mm, ss')
 
-        const phase = moon.calculate(2020, 12, 29, 9, 30, 0);
+        const phase = moon.calculate(date);
         message.channel.send(phase.name);
     }    
 });
