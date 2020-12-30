@@ -8,4 +8,10 @@ client.on('ready', async () => {
     client.user.setActivity(`what is today's moon phase?`,{ type: "STREAMING" });
 });
 
+client.on('message', async message => {
+    if(message.content == prefix + 'help'){
+        message.channel.send('wait.');
+    }    
+});
+
 client.login(process.env.TOKEN);
