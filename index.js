@@ -25,7 +25,7 @@ client.on('message', async message => {
         let second = moment().format('ss');
 
         const phase = moon.calculate(2020, 12, 30, 15, 30, 0, 0);
-        message.channel.send(phase.name);
+        message.channel.send(phase.age);
     }    
 });
 
