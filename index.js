@@ -1,5 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var moment = require('moment');
+
+require('moment-timezone');
+
+moment.tz.setDefault("Asia/Seoul");
 
 const prefix = 'm?';
 
@@ -12,7 +17,9 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     if(message.content == prefix + 'help'){
-        const phase = moon.calculate(2020, 12, 29, 9, 30, 0, 0);
+        var date = moment().format('YYYY-MM-DD HH:mm:ss')
+
+        const phase = moon.calculate(2020, 12, 29, 9, 30, 0);
         message.channel.send(phase.name);
     }    
 });

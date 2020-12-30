@@ -18,6 +18,8 @@
   "homepage": "https://github.com/ych-bup/moon-phase#readme",
   "dependencies": {
     "celestial-moon": "^1.0.1",
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.32"
   }
 }
