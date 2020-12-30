@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ych-bup/moon-phase#readme",
   "dependencies": {
+    "celestial-moon": "^1.0.1",
     "discord.js": "^12.5.1"
   }
 }
