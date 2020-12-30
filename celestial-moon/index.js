@@ -20,7 +20,7 @@ const MOON_PHASES = [
  * @param {string} month Month
  * @param {string} day Day
  * @param {string} hours Hours
- * @param {string} minutes Minutes
+ * @param {string} minutes Minutes 
  * @param {string} seconds Seconds
  * @param {string} utcOffset Timezone offset to UTC, i.e. -4 or +4
  */
