@@ -8,7 +8,7 @@ moment.tz.setDefault("Asia/Seoul");
 
 const prefix = 'm?';
 
-const moon = require('./celestial-moon');
+const moon = require('celestial-moon');
 
 client.on('ready', async () => {
     console.log('We logged in as ' + client.user.tag + '!');
@@ -17,12 +17,12 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     if(message.content == prefix + 'help'){
-        var year = moment().format('YYYY');
-        var month = moment().format('MM');
-        var date = moment().format('DD');
-        var hour = moment().format('HH');
-        var minute = moment().format('mm');
-        var second = moment().format('ss');
+        var year = new Date().getFullYear()
+        var month = new Date().getMonth()
+        var date = new Date().getDate()
+        var hour = new Date().getHours()
+        var minute = new Date().getMinutes()
+        var second = new Date().getSeconds()
 
         const phase = moon.calculate(year, month, date, hour, minute, second, 0);
         message.channel.send(phase.name);
