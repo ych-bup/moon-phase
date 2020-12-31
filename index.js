@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = 'm?';
 
 const moon = require('celestial-moon');
+const weather = require('weather-js');
 const moment = require('moment');
 
 client.on('ready', async () => {
@@ -104,6 +105,22 @@ client.on('message', async message => {
         if(phase.name == 'waning-crescent'){
             message.channel.send(waxingCrescent);
         }
+    }
+});
+
+client.on('message', async(message) => {
+    if(message.content.startsWith(prefix + 'weather')){
+        const location = message.content.split(" ").slice(1).join(" ");
+
+        weather.find({search: location, degreeType: 'C'}, function(err,result) {
+            try{
+                message.channel.send(JSON.stringify(result,null,2));
+            }
+            catch(err){
+                message.channel.send(':negative_squared_cross_mark: ERROR!');
+                console.log(err);
+            }
+        })
     }
 });
 
