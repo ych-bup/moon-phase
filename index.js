@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = 'm?';
 
 const moon = require('celestial-moon');
+const moment = require('moment');
 
 client.on('ready', async () => {
     console.log('We logged in as ' + client.user.tag + '!');
@@ -17,7 +18,7 @@ client.on('message', async message => {
     var hour = new Date().getHours()
     var minute = new Date().getMinutes()
     var second = new Date().getSeconds()
-    var fullDate = new Date.now();
+    var fullDate = moment().format('YYYY-MM-DD HH:mm:ss')
 
     const phase = moon.calculate(year, month, date, hour, minute, second, 0);
     
