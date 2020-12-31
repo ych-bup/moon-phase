@@ -79,36 +79,32 @@ client.on('message', async message => {
     const channel = message.guild.channels.cache.find(ch => ch.name === 'moon-phase');
     if(!channel) return;
 
-    setInterval(() => {
-        if(new Date().getMinutes() == 30){
-            if(phase.name == 'new-moon'){
-                channel.send(newMoon);
-            }
-            if(phase.name == 'waxing-crescent'){
-                channel.send(waxingCrescent);
-            }
-            if(phase.name == 'first-quarter'){
-                channel.send(firstQuarter);
-            }
-            if(phase.name == 'waxing-gibbous'){
-                channel.send(waxingGibbous);
-            }
-            if(phase.name == 'full-moon'){
-                channel.send(fullMoon);
-            }
-            if(phase.name == 'waning-gibbous'){
-                channel.send(waningGibbous);
-            }
-            if(phase.name == 'last-quarter'){
-                channel.send(lastQuarter);
-            }
-            if(phase.name == 'waning-crescent'){
-                channel.send(waxingCrescent);
-            }
-
+    if(message.content.startsWith(prefix + 'phase')){
+        if(phase.name == 'new-moon'){
+            message.channel.send(newMoon);
         }
-    }, 30000);
-
+        if(phase.name == 'waxing-crescent'){
+            message.channel.send(waxingCrescent);
+        }
+        if(phase.name == 'first-quarter'){
+            message.channel.send(firstQuarter);
+        }
+        if(phase.name == 'waxing-gibbous'){
+            message.channel.send(waxingGibbous);
+        }
+        if(phase.name == 'full-moon'){
+            message.channel.send(fullMoon);
+        }
+        if(phase.name == 'waning-gibbous'){
+            message.channel.send(waningGibbous);
+        }
+        if(phase.name == 'last-quarter'){
+            message.channel.send(lastQuarter);
+        }
+        if(phase.name == 'waning-crescent'){
+            message.channel.send(waxingCrescent);
+        }
+    }
 });
 
 client.login(process.env.TOKEN);
