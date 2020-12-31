@@ -114,7 +114,8 @@ client.on('message', async(message) => {
 
         weather.find({search: location, degreeType: 'C'}, function(err,result) {
             try{
-                message.channel.send(JSON.stringify(result,null,2).substring(100));
+                const attachment = new Discord.MessageAttachment(JSON.stringify(result,null,2))
+                message.channel.send(attachment);
             }
             catch(err){
                 message.channel.send(':negative_squared_cross_mark: ERROR!');
