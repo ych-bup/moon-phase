@@ -76,9 +76,6 @@ client.on('message', async message => {
         .setThumbnail('https://sites.google.com/site/moonfactssciencelesson/_/rsrc/1334592105347/the-phases-of-the-moon/waning-crescent/waning%20crescent.jpg?height=272&width=274') // finish
         .setTimestamp()
     
-    const channel = message.guild.channels.cache.find(ch => ch.name === 'moon-phase');
-    if(!channel) return;
-
     if(message.content.startsWith(prefix + 'phase')){
         if(phase.name == 'new-moon'){
             message.channel.send(newMoon);
