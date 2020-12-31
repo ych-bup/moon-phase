@@ -80,7 +80,7 @@ client.on('message', async message => {
     if(!channel) return;
 
     setInterval(() => {
-        if(new Date().getMinutes() == 21){
+        if(new Date().getMinutes() == 30){
             if(phase.name == 'new-moon'){
                 channel.send(newMoon);
             }
