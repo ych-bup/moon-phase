@@ -108,21 +108,4 @@ client.on('message', async message => {
     }
 });
 
-client.on('message', async(message) => {
-    if(message.content.startsWith(prefix + 'weather')){
-        const location = message.content.split(" ").slice(1).join(" ");
-
-        weather.find({search: location, degreeType: 'C'}, function(err,result) {
-            try{
-                const attachment = new Discord.MessageAttachment(JSON.stringify(result,null,2))
-                message.channel.send(attachment);
-            }
-            catch(err){
-                message.channel.send(':negative_squared_cross_mark: ERROR!');
-                console.log(err);
-            }
-        })
-    }
-});
-
 client.login(process.env.TOKEN);
