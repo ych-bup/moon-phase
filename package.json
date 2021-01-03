@@ -21,6 +21,7 @@
     "discord.js": "^12.5.1",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.32",
+    "openweather-apis": "^4.4.1",
     "weather-js": "^2.0.0"
   }
 }
