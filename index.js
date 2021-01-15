@@ -108,4 +108,23 @@ client.on('message', async message => {
     }
 });
 
+client.on('message', async(message) => {
+    if(message.content == prefix + "weather"){
+        const city = message.content.split(" ").slice(1);
+        var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest();
+        var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=ab284d4e6164ffed82a5af8bd073fed4", true);
+        xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+        //console.log(this.responseText);
+            var obj = JSON.parse(xmlhttp.responseText);
+            message.channel.send(obj.main.temp-273);
+            message.channel.send(obj.clouds.all + "%");
+        }
+    };
+    xmlhttp.send();
+    }
+})
+
 client.login(process.env.TOKEN);
