@@ -42,4 +42,3 @@
 </div>
 
 > Github [@ych-bup](https://github.com/ych-bup)    
-Instagram [@chanhoyoon_280](https://www.instagram.com/chanhoyoon_280)
