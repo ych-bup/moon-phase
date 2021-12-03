@@ -36,6 +36,7 @@
 
 <div align="left">
     <p>
+        <img src="/냐가.jpg">
         <h3>Chanho Yoon (ych-bup)</h3>
     </p>
 </div>
