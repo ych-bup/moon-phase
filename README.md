@@ -36,7 +36,6 @@
 
 <div align="left">
     <p>
-        <img src="https://images-ext-2.discordapp.net/external/ZeNU7OTsjrcFlY_Cbe1plfLI4QmZW1CErPlZJgiiAas/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/602011789408075777/b78b9e350f53ec13ab899a1e8a6bdfe7.png?width=502&height=502" width="8%" height="8%">
         <h3>Chanho Yoon (ych-bup)</h3>
     </p>
 </div>
